@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="page-header">
+        <h1>
+            {{_stockDetailsData.Name}} <small>{{_stockDetailsData.BseIndustry}}</small>
+        </h1>
+        <h4>BSE : <a href="{{_stockDetailsData.BseStockLink}}" target="_blank">{{_stockDetailsData.BseId}}</a> 
+        &nbsp;&nbsp;&nbsp; NSE: {{_stockDetailsData.NseId}}
+        &nbsp;&nbsp;&nbsp; ISIN: {{_stockDetailsData.ISIN}}</h4>
+    </div>
+    <section>
+        <h4 class="col-sm-4" id="stock-face-value">Face Value: &nbsp;<b>{{_stockDetailsData.FaceValue}}</b></h4>
+        <h4 class="col-sm-4">Current Price: &nbsp;<b>{{_stockDetailsData.CurrentPrice}}</b></h4>
+        <h4 class="col-sm-4">52&nbsp;Week High/Low: &nbsp;<b>{{_stockDetailsData.High52W}}/{{_stockDetailsData.Low52W}}</b></h4>
+    </section>
+    <section id="charts">
+        <stock-chart></stock-chart>
+    </section>
+</div>
